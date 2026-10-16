@@ -54,4 +54,7 @@
 .mobility-card p { color: var(--muted); font-size: 14px; line-height: 1.5; margin: 0 0 20px; }
 .timer-button { margin-top: auto; align-self: flex-start; border: 1px solid var(--line); background: transparent; border-radius: 99px; padding: 10px 14px; cursor: pointer; font-weight: 700; }
 .timer-button.running { background: var(--acid); border-color: var(--ink); }
+.mobility-actions { margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+.mobility-actions .timer-button { margin-top: 0; }
+.mobility-video { border: 1px solid var(--ink); background: var(--ink); color: white; border-radius: 99px; padding: 10px 14px; cursor: pointer; font-weight: 700; }
 @media(max-width:850px){.reset-section{grid-template-columns:1fr}.mobility-grid{grid-template-columns:1fr}}
