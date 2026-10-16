@@ -16,3 +16,42 @@
   font-weight: 700;
   margin: 0 0 18px;
 }
+
+.minute-badge {
+  display: inline-block;
+  margin: 12px 0 0;
+  padding: 7px 10px;
+  border-radius: 99px;
+  background: var(--acid);
+  font: 700 11px "Space Grotesk";
+  letter-spacing: .1em;
+}
+
+.reset-section {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: clamp(34px, 6vw, 90px);
+  padding: 90px clamp(20px, 5vw, 72px);
+  background: #f8cfc5;
+}
+
+.reset-intro h2 {
+  font: 600 clamp(42px, 5vw, 72px)/.98 "Space Grotesk";
+  letter-spacing: -.055em;
+  margin: 0 0 22px;
+}
+
+.reset-intro > p:not(.eyebrow) { line-height: 1.65; max-width: 470px; }
+.readiness { margin-top: 34px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.readiness span { width: 100%; font-weight: 700; margin-bottom: 4px; }
+.readiness button { border: 1px solid var(--ink); background: transparent; padding: 9px 13px; border-radius: 99px; cursor: pointer; }
+.readiness button.active { background: var(--ink); color: var(--acid); }
+.feel-note { font-size: 13px; color: #6f514a; }
+.mobility-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.mobility-card { min-height: 220px; background: var(--paper); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; }
+.mobility-card .tool { font: 700 11px "Space Grotesk"; letter-spacing: .14em; color: var(--coral); }
+.mobility-card h3 { font: 600 23px "Space Grotesk"; margin: 18px 0 9px; }
+.mobility-card p { color: var(--muted); font-size: 14px; line-height: 1.5; margin: 0 0 20px; }
+.timer-button { margin-top: auto; align-self: flex-start; border: 1px solid var(--line); background: transparent; border-radius: 99px; padding: 10px 14px; cursor: pointer; font-weight: 700; }
+.timer-button.running { background: var(--acid); border-color: var(--ink); }
+@media(max-width:850px){.reset-section{grid-template-columns:1fr}.mobility-grid{grid-template-columns:1fr}}
