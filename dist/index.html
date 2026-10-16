@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#11130f">
+  <title>Form Five</title>
+  <meta name="description" content="A personalized five-day form-first training companion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Form Five home"><span class="brand-mark">F5</span><span>FORM FIVE</span></a>
+    <button class="icon-button" id="settingsBtn" aria-label="Open profile settings">☰</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow" id="todayLabel">TODAY · PUSH</p>
+        <h1>Train the movement.<br><em>Then move the weight.</em></h1>
+        <p class="hero-copy">A five-day, form-first split built for your current profile: <strong>77 kg</strong>, <strong>5′10″</strong>. Loads adapt to your effort—not a guess from a calculator.</p>
+        <div class="hero-actions">
+          <button class="primary" id="startBtn">Start today’s session <span>↗</span></button>
+          <button class="secondary" id="swapDayBtn">Choose another day</button>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="figure"><i class="head"></i><i class="torso"></i><i class="arm left"></i><i class="arm right"></i><i class="leg left"></i><i class="leg right"></i></div>
+        <span class="visual-tag">FORM / 01</span>
+      </div>
+    </section>
+
+    <section class="week-section">
+      <div class="section-heading"><div><p class="eyebrow">YOUR WEEK</p><h2>Five days. One clear focus.</h2></div><p class="muted">Tap a day to load the session.</p></div>
+      <div class="week-strip" id="weekStrip"></div>
+    </section>
+
+    <section class="session-section" id="session">
+      <div class="session-head">
+        <div><p class="eyebrow" id="sessionKicker">DAY 1 · PUSH</p><h2 id="sessionTitle">Chest, shoulders & triceps</h2><p class="muted" id="sessionMeta">~55 min · 16 working sets</p></div>
+        <div class="session-progress"><span id="progressText">0 / 5 complete</span><div class="progress-track"><i id="progressBar"></i></div></div>
+      </div>
+      <div class="exercise-list" id="exerciseList"></div>
+    </section>
+
+    <section class="principles">
+      <article><span>01</span><h3>Earn the load</h3><p>Keep 1–3 good reps in reserve. Add weight only when every rep stays controlled.</p></article>
+      <article><span>02</span><h3>Own the range</h3><p>Use the deepest pain-free range you can control. Never chase range through joint pain.</p></article>
+      <article><span>03</span><h3>Recover to grow</h3><p>Two rest days are part of the plan. Sleep and consistency beat a heroic single session.</p></article>
+    </section>
+  </main>
+
+  <dialog id="clipDialog" class="clip-dialog">
+    <button class="close" id="closeClip" aria-label="Close">×</button>
+    <div class="clip-stage" id="clipStage"><div class="demo-person"><i></i><b></b><span></span></div><div class="demo-line"></div></div>
+    <p class="eyebrow" id="clipMuscle">MOVEMENT DEMO</p><h2 id="clipTitle">Exercise</h2>
+    <div class="cue-grid" id="cueGrid"></div>
+    <p class="clip-note">This is a simplified movement loop, not a substitute for in-person coaching. Stop if you feel sharp pain, dizziness, or unusual shortness of breath.</p>
+  </dialog>
+
+  <dialog id="settingsDialog" class="settings-dialog">
+    <button class="close" id="closeSettings" aria-label="Close">×</button>
+    <p class="eyebrow">PERSONALIZE</p><h2>Your training profile</h2>
+    <form id="profileForm">
+      <label>Weight <span><input id="weightInput" type="number" min="35" max="250" value="77"> kg</span></label>
+      <label>Height <span><input id="heightInput" type="number" min="120" max="230" value="178"> cm</span></label>
+      <label>Primary goal <select id="goalInput"><option value="Balanced hypertrophy">Balanced hypertrophy</option><option value="Build strength">Build strength</option><option value="General fitness">General fitness</option></select></label>
+      <label>Experience <select id="experienceInput"><option value="Intermediate">Intermediate</option><option value="Beginner">Beginner</option><option value="Advanced">Advanced</option></select></label>
+      <button class="primary" type="submit">Save profile</button>
+    </form>
+    <p class="clip-note">This profile adjusts presentation and recommendations, not medical or nutritional advice.</p>
+  </dialog>
+
+  <footer><span>FORM FIVE</span><p>Independent training companion · Inspired by form-first coaching principles · Not affiliated with ATHLEAN-X</p><a href="https://www.youtube.com/@athleanx" target="_blank" rel="noreferrer">Visit official channel ↗</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
