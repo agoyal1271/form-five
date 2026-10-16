@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="video.css">
 </head>
 <body>
   <header class="topbar">
@@ -57,10 +58,11 @@
 
   <dialog id="clipDialog" class="clip-dialog">
     <button class="close" id="closeClip" aria-label="Close">×</button>
-    <div class="clip-stage" id="clipStage"><div class="demo-person"><i></i><b></b><span></span></div><div class="demo-line"></div></div>
-    <p class="eyebrow" id="clipMuscle">MOVEMENT DEMO</p><h2 id="clipTitle">Exercise</h2>
+    <div class="clip-stage" id="clipStage"><iframe id="clipVideo" title="Exercise form tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <p class="eyebrow" id="clipMuscle">FORM VIDEO</p><h2 id="clipTitle">Exercise</h2>
     <div class="cue-grid" id="cueGrid"></div>
-    <p class="clip-note">This is a simplified movement loop, not a substitute for in-person coaching. Stop if you feel sharp pain, dizziness, or unusual shortness of breath.</p>
+    <a class="youtube-link" id="youtubeLink" target="_blank" rel="noreferrer">Open the full lesson on YouTube ↗</a>
+    <p class="clip-note">Video instruction is from the official ATHLEAN-X YouTube channel. It is embedded through YouTube and remains the creator’s content. Stop if you feel sharp pain, dizziness, or unusual shortness of breath.</p>
   </dialog>
 
   <dialog id="settingsDialog" class="settings-dialog">
